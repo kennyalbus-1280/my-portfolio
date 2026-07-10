@@ -171,9 +171,9 @@ body.light .network-canvas{ opacity:.28; }
 
 .avatar-frame{
   position: relative;
-  width: 100px; height:100px;
+  width: 180px; height:180px;
   flex-shrink: 0;
-  border-radius: 14px;
+  border-radius: 5px;
   padding: 2px;
   background: linear-gradient(135deg, var(--secondary), var(--light-accent));
 }
