@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akeny Douglas — Software Developer and Technical Student</title>
+<meta name="description" content="Akeny Douglas builds practical, secure web systems with PHP, MySQL, Bootstrap and JavaScript.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#home" class="nav-mark">AKENY'S <span>PORTFOLIO</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+      <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+      <li><a href="#about" class="nav-link" data-nav>About</a></li>
+      <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+    </ul>
+
+    <button class="mode-toggle" id="modeToggle" aria-label="Toggle light mode">
+      <span class="mode-dot"></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME / HERO -->
+  <section id="home" class="hero">
+    <canvas id="networkCanvas" class="network-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-id">
+          <span class="avatar-frame">
+            <span class="avatar-frame-corner tl"></span>
+            <span class="avatar-frame-corner tr"></span>
+            <span class="avatar-frame-corner bl"></span>
+            <span class="avatar-frame-corner br"></span>
+            <img src="logo.jpg" alt="Portrait of Akeny Douglas" class="avatar-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="avatar-fallback">AKENY DOUGLAS</span>
+            <span class="avatar-status" title="Available for work"></span>
+          </span>
+          <p class="eyebrow">Passionate Software Developer and Technical Student — kampala, uganda</p>
+        </div>
+
+        <h1 class="hero-title">
+          AKENY<br>
+          <span class="hero-title-accent">DOUGLAS</span>
+        </h1>
+        <p class="hero-tagline">
+          I design and build practical web systems using PHP, MySQL, Bootstrap and JavaScript. I help businesses turn manual workflows into secure, efficient digital platforms.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <p class="stat-num" data-count="5">0</p>
+            <p class="stat-label">Projects shipped</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num" data-count="2">0</p>
+            <p class="stat-label">Ventures run alongside</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num" data-count="3">0</p>
+            <p class="stat-label">Core stacks — PHP·JS·SQL</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-hidden="true">
+        <div class="panel-head">
+          <span></span><span></span><span></span>
+          <p>schema.sql</p>
+        </div>
+        <pre class="panel-body"><code id="typedCode"></code><span class="panel-cursor">▌</span></pre>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-head reveal">
+      <p class="eyebrow">Featured work</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Systems built for real businesses and coursework — from customer-facing platforms to the schemas that hold them together.</p>
+    </div>
+
+    <div class="filter-bar reveal" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Web App">Web Apps</button>
+      <button class="filter-btn" data-filter="Security">Security</button>
+      <button class="filter-btn" data-filter="Database">Database</button>
+      <button class="filter-btn" data-filter="Docs">Docs</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+
+      <article class="project-card reveal" data-category="Web App">
+        <div class="card-head">
+          <p class="card-table">TABLE <span>product_comparison_engine</span></p>
+          <span class="status-pill status-shipped">shipped</span>
+        </div>
+        <h3 class="card-title">Product Comparison &amp; Supplier Management System</h3>
+        <p class="card-desc">Lets businesses compare supplier products side by side and manage vendor relationships digitally, replacing spreadsheets and phone calls with one dashboard.</p>
+        <ul class="card-fields">
+          <li><span>category</span> Full-Stack Web App</li>
+          <li><span>stack</span> PHP · MySQL · Bootstrap · JS</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal" data-category="Security">
+        <div class="card-head">
+          <p class="card-table">TABLE <span>auth_role_manager</span></p>
+          <span class="status-pill status-shipped">shipped</span>
+        </div>
+        <h3 class="card-title">Role-Based Authentication System</h3>
+        <p class="card-desc">A multi-tier login system with distinct permission levels for admins, staff and customers, built to secure a live agency-banking workflow.</p>
+        <ul class="card-fields">
+          <li><span>category</span> Security / Backend</li>
+          <li><span>stack</span> PHP · MySQL · Sessions</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal" data-category="Database">
+        <div class="card-head">
+          <p class="card-table">TABLE <span>schema_with_enums</span></p>
+          <span class="status-pill status-docs">documented</span>
+        </div>
+        <h3 class="card-title">Relational Schema Design with ENUM Constraints</h3>
+        <p class="card-desc">A normalized database schema for a multi-role platform, using ENUM types to enforce valid states at the database layer instead of app-side checks alone.</p>
+        <ul class="card-fields">
+          <li><span>category</span> Database Design</li>
+          <li><span>stack</span> MySQL · ENUM · Normalization</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal" data-category="Database">
+        <div class="card-head">
+          <p class="card-table">TABLE <span>reporting_views</span></p>
+          <span class="status-pill status-shipped">shipped</span>
+        </div>
+        <h3 class="card-title">Joined Reporting Views</h3>
+        <p class="card-desc">A set of SQL views joining suppliers, products and transactions, powering dashboard reports without duplicating query logic across the app.</p>
+        <ul class="card-fields">
+          <li><span>category</span> Database / Reporting</li>
+          <li><span>stack</span> MySQL · Views · Joins</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal" data-category="Docs">
+        <div class="card-head">
+          <p class="card-table">TABLE <span>proposals_and_docs</span></p>
+          <span class="status-pill status-ongoing">ongoing</span>
+        </div>
+        <h3 class="card-title">Business Proposals &amp; Technical Documentation</h3>
+        <p class="card-desc">Formal proposals and technical write-ups that turn early business ideas into structured, presentable plans ready for stakeholders.</p>
+        <ul class="card-fields">
+          <li><span>category</span> Documentation</li>
+          <li><span>stack</span> Markdown · Diagrams · Reports</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-about">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="eyebrow"> About</p>
+        <h2 class="section-title">Building software, and the businesses around it</h2>
+        <p class="about-text">
+          I'm a developer and student based in Kampala, studying at Saipali Institute of Technology, Mengo Campus. My work sits at the intersection of two things I care about: writing clean, dependable code, and understanding how a business actually runs day to day.
+        </p>
+        <!-- <p class="about-text">
+          Alongside coursework and client projects, I run a couple of small ventures of my own — a homemade juice brand and a mobile-money agency — which keeps my software grounded in real operational problems rather than abstract requirements.
+        </p> -->
+        <p class="about-text">
+          I like systems that stay simple to reason about even as they grow: normalized schemas, clear permission boundaries, and interfaces that don't need a manual.
+        </p>
+      </div>
+
+      <div class="skills-panel reveal">
+        <p class="skills-label">My Skills</p>
+        <div class="skills-grid">
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML &amp; CSS</span>
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Database Design</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Java-swing</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">Dependency Management(maven|gradle)</span>
+          <span class="skill-tag">Responsive UI</span>
+          <span class="skill-tag">Mobile Application Development(Java/Android Studio)</span>
+          <span class="skill-tag">Computer Hardware Maintenance</span>
+          <span class="skill-tag">Computer Software Installation</span>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-contact">
+    <div class="contact-inner reveal">
+      <p class="eyebrow"> get in touch </p>
+      <h2 class="section-title">Let's build something</h2>
+      <p class="section-sub">Have a project, a proposal, or a rough idea on a napkin? I'm glad to look at it.</p>
+
+      <div class="contact-row">
+        <button class="email-copy" id="emailCopy">
+          <span id="emailText">akenydouglas@gmail.com</span>
+          <span class="copy-icon" id="copyIcon">copy</span>
+        </button>
+        <a class="btn btn-primary mail-btn" href="mailto:akenydouglas@gmail.com">Send an email</a>
+      </div>
+
+      <!-- TODO: replace href="#" below with your real GitHub / LinkedIn / WhatsApp links -->
+      <div class="contact-links">
+        <a href="https://github.com/kennyalbus-1280" class="contact-chip">GitHub</a>
+        <a href="https://www.linkedin.com/in/akeny-douglas-567b87336?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="contact-chip">LinkedIn</a>
+        <a href="https://wa.me/256772891280" class="contact-chip">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Akeny Douglas. Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
