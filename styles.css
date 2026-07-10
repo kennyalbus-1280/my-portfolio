@@ -171,7 +171,7 @@ body.light .network-canvas{ opacity:.28; }
 
 .avatar-frame{
   position: relative;
-  width: 180px; height:180px;
+  width: 150px; height:150px;
   flex-shrink: 0;
   border-radius: 5px;
   padding: 2px;
