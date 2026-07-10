@@ -173,7 +173,7 @@ body.light .network-canvas{ opacity:.28; }
   position: relative;
   width: 200px; height:200px;
   flex-shrink: 0;
-  border-radius: 14px;
+  border-radius: 50px;
   padding: 2px;
   background: linear-gradient(135deg, var(--secondary), var(--light-accent));
 }
